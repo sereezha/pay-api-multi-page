@@ -1,5 +1,6 @@
 import React from 'react';
 import Icon from '../icon';
+import VisuallyHidden from '../visually-hidden';
 import { List, ListItem } from './clients-list.styled';
 import { APPEARANCES } from './constants';
 
@@ -41,6 +42,7 @@ const ClientsList = ({ appearance = APPEARANCES.dark }) => {
 		<List appearance={appearance}>
 			{CLIENTS.map(({ id, glyph, label }) => (
 				<ListItem key={id} aria-label={label}>
+					<VisuallyHidden>{label}</VisuallyHidden>
 					<Icon glyph={glyph} aria-hidden="true" />
 				</ListItem>
 			))}
