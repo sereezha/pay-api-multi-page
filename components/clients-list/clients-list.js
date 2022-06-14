@@ -41,7 +41,7 @@ const ClientsList = ({ appearance = APPEARANCES.dark }) => {
 	return (
 		<List appearance={appearance}>
 			{CLIENTS.map(({ id, glyph, label }) => (
-				<ListItem key={id} aria-label={label}>
+				<ListItem key={id}>
 					<VisuallyHidden>{label}</VisuallyHidden>
 					<Icon glyph={glyph} aria-hidden="true" />
 				</ListItem>
