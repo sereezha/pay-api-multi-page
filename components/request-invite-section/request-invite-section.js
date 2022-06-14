@@ -9,7 +9,7 @@ const RequestInviteSection = () => {
 		<Section>
 			<Container>
 				<Inner>
-					<Heading forwardedAs="h2" type="heading-2">
+					<Heading as="h2" type="heading-2">
 						Ready to start?
 					</Heading>
 					<FormWrapper>

@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const Wrapper = styled.span`
+export const Wrapper = styled.div`
 	position: absolute;
 	top: auto;
 	left: -10000px;

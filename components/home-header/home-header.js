@@ -15,7 +15,7 @@ const HomeHeader = () => {
 						<Title forwardedAs="h1" type="heading-0">
 							Start building with our APIs for absolutely free.
 						</Title>
-						<RequestInviteForm showHelpText />
+						<RequestInviteForm inputIdPrefix="home-" showHelpText />
 					</Content>
 					<ImageWrap>
 						<Image

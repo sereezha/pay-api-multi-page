@@ -1,7 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
 import Container from '../container';
-import Heading from '../heading';
 import VisuallyHidden from '../visually-hidden';
 import {
 	Section,
@@ -20,9 +19,7 @@ const AdvantagesSection = () => {
 		<Section>
 			<Circle />
 			<Container>
-				<VisuallyHidden>
-					<Heading>Advantages</Heading>
-				</VisuallyHidden>
+				<VisuallyHidden as="h2">Advantages</VisuallyHidden>
 				<Row>
 					<ImageWrapper>
 						<ImageContainer>

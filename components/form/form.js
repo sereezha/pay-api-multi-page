@@ -61,11 +61,13 @@ const Form = ({ className }) => {
 				label="Name"
 				hideLabel
 				errorMessage={errors[fields.name]?.message}
+				id={fields.name}
 			>
 				<Input
+					id={fields.name}
 					fullWidth
 					placeholder="Name"
-          invalid={!!errors[fields.name]}
+					invalid={!!errors[fields.name]}
 					{...register(fields.name, { required: ERROR_MESSAGES.required })}
 				/>
 			</FormField>
@@ -73,11 +75,13 @@ const Form = ({ className }) => {
 				label="Email Address"
 				hideLabel
 				errorMessage={emailAddressMessage}
+				id={fields.emailAddress}
 			>
 				<Input
+					id={fields.emailAddress}
 					fullWidth
 					placeholder="Email Address"
-          invalid={!!errors[fields.emailAddress]}
+					invalid={!!errors[fields.emailAddress]}
 					{...register(fields.emailAddress, {
 						required: ERROR_MESSAGES.required,
 						validate: validateEmail,
@@ -88,11 +92,13 @@ const Form = ({ className }) => {
 				label="Company Name"
 				hideLabel
 				errorMessage={errors[fields.companyName]?.message}
+				id={fields.companyName}
 			>
 				<Input
+					id={fields.companyName}
 					fullWidth
 					placeholder="Company Name"
-          invalid={!!errors[fields.companyName]}
+					invalid={!!errors[fields.companyName]}
 					{...register(fields.companyName, {
 						required: ERROR_MESSAGES.required,
 					})}
@@ -102,11 +108,13 @@ const Form = ({ className }) => {
 				label="Title"
 				hideLabel
 				errorMessage={errors[fields.title]?.message}
+				id={fields.title}
 			>
 				<Input
+					id={fields.title}
 					fullWidth
 					placeholder="Title"
-          invalid={!!errors[fields.title]}
+					invalid={!!errors[fields.title]}
 					{...register(fields.title, { required: ERROR_MESSAGES.required })}
 				/>
 			</FormField>
@@ -114,11 +122,13 @@ const Form = ({ className }) => {
 				label="Message"
 				hideLabel
 				errorMessage={errors[fields.message]?.message}
+				id={fields.message}
 			>
 				<Textarea
+					id={fields.message}
 					fullWidth
 					placeholder="Message"
-          invalid={!!errors[fields.message]}
+					invalid={!!errors[fields.message]}
 					{...register(fields.message, { required: ERROR_MESSAGES.required })}
 				/>
 			</FormField>

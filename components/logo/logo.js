@@ -15,6 +15,7 @@ const Logo = ({ appearance = APPEARANCES.dark, className }) => {
 				appearance={appearance}
 				className={className}
 				aria-current={isHomePage}
+        aria-label="Pay-api logo"
 			>
 				<svg
 					width="135"

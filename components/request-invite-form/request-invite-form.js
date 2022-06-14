@@ -21,7 +21,7 @@ const { validateEmail, ERROR_MESSAGES } = formValidation;
 const { COLLECTIONS } = firebaseConstants;
 const requestInviteFormRef = collection(db, COLLECTIONS.requestInviteForm);
 
-const RequestInviteForm = ({ showHelpText }) => {
+const RequestInviteForm = ({ showHelpText, inputIdPrefix = '' }) => {
 	const {
 		register,
 		handleSubmit,
@@ -49,12 +49,15 @@ const RequestInviteForm = ({ showHelpText }) => {
 	return (
 		<Wrapper>
 			<Form onSubmit={handleSubmit(onSubmit)} noValidate>
-				<VisuallyHidden>
-					<label htmlFor="request-invite-email">Request invite</label>
+				<VisuallyHidden
+					as="label"
+					htmlFor={`${inputIdPrefix}request-invite-email`}
+				>
+					Request invite
 				</VisuallyHidden>
 				<FormField>
 					<Input
-						id="request-invite-email"
+						id={`${inputIdPrefix}request-invite-email`}
 						type="email"
 						placeholder="Enter email address"
 						{...register('request-invite-email', {
